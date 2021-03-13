@@ -91,7 +91,10 @@ def main():
    
    print ("Valid possible solutions")
    solution_list = find_solution(anagram_list,dictionary_set)
-   print ("Generated Solutions for " + str(anagram_list) + " are as: " + str(solution_list))
+   if len(solution_list) == 0:
+     print ("No valid Solutions for " + str(anagram_list))
+   else:
+      print ("Generated Solutions for " + str(anagram_list) + " are as: " + str(solution_list))
    
 
 
