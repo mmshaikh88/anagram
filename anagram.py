@@ -82,20 +82,11 @@ def main():
 
    anagram_lst = []
    anagram_list = generate_anagram(anagrams_of)
-   print ("Generated Anagram List: " + str(anagram_list))
-
-   valid_invalid = verify_solution (anagrams_of, dictionary_set)
-   print ("The word \"" + anagrams_of + "\" is ")
-   if (valid_invalid): print ("valid string as far as dictionary word is concerned")
-   else: print ("invalid string as far as dictionary word is concerned")
-   
-   print ("Valid possible solutions")
-   solution_list = find_solution(anagram_list,dictionary_set)
-   if len(solution_list) == 0:
-     print ("No valid Solutions for " + str(anagram_list))
-   else:
-      print ("Generated Solutions for " + str(anagram_list) + " are as: " + str(solution_list))
-   
+   print ("Generated Anagram List: ")
+   i=0
+   for anagram in anagram_list:
+      i+=1
+      print (str(i) + ": " + str(anagram))
 
 
 # -------------------------------------------------------------
